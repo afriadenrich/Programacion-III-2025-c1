@@ -1,0 +1,30 @@
+/*
+
+¿Qué voy a modificar? {
+    propiedad: valor/es
+}
+
+*/
+
+/* Poner el nombre de una tag -> modifica todas las instancias de esa tag*/
+h1 {
+    color: red;
+}
+
+/* Las clases llevan un . */
+.violeta {
+    color: purple;
+}
+
+/* Para seleccionar IDs usamos # */
+#subtitulo1 {
+    color: rgb(51, 132, 132);
+}
+
+.subrayado {
+    text-decoration: underline;
+}
+
+* {
+    color: brown;
+}
