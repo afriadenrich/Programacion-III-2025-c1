@@ -20,7 +20,7 @@ body {
     /*grid-template-columns: 50% 50%;
     grid-template-rows: 200px 200px 300px 300px 200px;*/
     grid-template-columns: 3fr 2fr; /* 5 fracciones 3/5 y 2/5  */
-    grid-template-rows: 100px 100px 2fr 2fr 100px; 
+    grid-template-rows: 1fr 1fr 2fr 2fr 1fr; 
 
 }
 
