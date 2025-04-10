@@ -1,0 +1,29 @@
+#titulo {
+    background-color: rgb(129, 130, 170);
+    /* border-color: #000;
+    border-style: groove;
+    border-width: 5px; */
+    border: groove #000;
+    border-width: 5px 10px 15px 20px;
+    padding: 20px 15px 10px 5px;
+    margin-left: 10px;
+    color: #FFF;
+    
+}
+
+#titulo h1 {
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 100;
+    font-family: "Fira Code", monospace;
+}
+
+
+/* FUENTE QUE IMPORTAMOS DESDE: https://fonts.google.com/specimen/Fira+Code */
+
+#nav {
+    background-image: url("./imagenes/tren1.jpg");
+    background-size: contain;
+    background-repeat:no-repeat;
+    background-position: center;
+}
