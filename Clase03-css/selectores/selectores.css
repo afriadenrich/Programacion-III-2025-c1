@@ -1,0 +1,44 @@
+/* Slectores básicos*/
+h1 {
+
+}
+
+.clase {
+
+}
+
+#id {
+
+}
+
+/* Varios selectores */
+h1, h2, p {
+
+}
+
+/* Seleccionar hijos o herencia  */
+
+main p {
+
+}
+
+/* Selección de etiqueta + atributos */
+.rojo {
+    color: red;
+}
+
+p.rojo {
+    background-color: black;
+}
+
+p#principal {
+    background-color: aqua;
+}
+
+*[lang="en"] {
+    text-transform: uppercase; /* Uppercase = mayúscula */
+}
+
+input[type="file"] {
+    background-color: aqua;
+}

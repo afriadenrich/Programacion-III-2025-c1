@@ -28,7 +28,11 @@
 -[Formato Grid](https://developer.mozilla.org/es/docs/Web/CSS/CSS_grid_layout)
 -[Guía de Grid](https://developer.mozilla.org/es/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
 
+## Clase 03 - 11/04/25
 
+### 
+
+### Documentación 
 
 # Pendiente por ver
 
