@@ -30,10 +30,19 @@
 
 ## Clase 03 - 11/04/25
 
-### 
+- +Selectores
+- Flex
+- Media queries
 
 ### Documentación 
+- [Selectores de atributo](https://developer.mozilla.org/es/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors)
+- [Formato flex](https://developer.mozilla.org/es/docs/Learn_web_development/Core/CSS_layout/Flexbox)
+- [Media Queries](https://developer.mozilla.org/es/docs/Learn_web_development/Core/CSS_layout/Media_queries)
 
-# Pendiente por ver
 
-- [Nota del profe, no olvidar dar esto](https://developer.mozilla.org/es/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors)
+## Clase 04 - 16/04/25
+
+- Javascript básico
+
+### Documentación
+    
