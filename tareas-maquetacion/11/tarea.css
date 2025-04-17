@@ -1,0 +1,239 @@
+html{
+    height: 100%;
+    width: 100%;
+}
+body{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#grilla{
+    display: grid;
+    grid-template-columns: 200px auto;
+    grid-template-rows: 30px auto;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+#encabezado{
+    margin: 0;
+    grid-row: 1;
+    grid-column: 1 / 3;
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: 100%;
+    height: 100%;
+    width: 100%;
+    gap: 10px;
+}
+
+#encabezado div{
+    height: 100%;
+    width: 100%;
+}
+
+#LogoSection{
+    display: flex;
+    gap: 10px;
+}
+#LogoSection img{
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.btnHamburger{
+    margin-left: 20px;
+    margin-top: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 20px;
+    height: 15px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 3px;
+    border-radius: 500px;
+}
+.btnHamburger span {
+    height: 1px;
+    max-width: 10px;
+    background-color: #333;
+    border-radius: 1px;
+    width: 100%;
+    display: block;
+}
+.btnHamburger:hover{
+    background-color: #d7d7d7;
+}
+
+
+/* Barra busqueda y mic*/
+.SegmentoBusqueda{
+    display: grid;
+    grid-template-columns: 500px 35px 35px;
+    align-items: center;
+    justify-content: center;
+}
+.SegmentoBusqueda input{
+    border-radius: 999px 0 0 999px; /* para asegurar redondeado en borde izquierdo */
+    border: solid 1px gray;
+    background: transparent;
+    color: white;
+    font-size: 13px;
+    outline: none;
+    height: 19px;
+}
+.SegmentoBusqueda input::placeholder {
+    color: grey;
+    padding: 10px;
+    font-family:'Times New Roman', Times, serif;
+}
+#btnLupita{
+    background-color: #ececec; /* color del botón */
+    border: 1px solid gray;
+    padding: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px 999px 999px 0px; /* para asegurar redondeado en borde izquierdo */
+}
+#btnLupita img{
+    filter: invert(100%);
+}
+#btnLupita:hover{
+    background-color: #d7d7d7;
+}
+
+#btnMic{
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 20px;
+    border: none;
+    background-color: #ececec; /* color del botón */
+}
+#btnMic img{
+    filter: invert(100%);
+    padding: 2.5px;
+}
+#btnMic:hover{
+    background-color: #d7d7d7;
+}
+
+/* BtnCrear, BtnNotif y Foto Perfil */
+#Perfil{
+    display: grid;
+    grid-template-columns: 1fr 35px 1fr;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+}
+#Perfil button{
+    margin: 0;
+    padding: 0;
+}
+#btnCrear{
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: #ececec;
+    border: none;
+    width: 70px;
+    height: 25px;
+}
+#btnCrear:hover{
+    background-color: #d7d7d7;
+}
+
+#notif{
+    background-color: transparent;
+    border-radius: 100px;
+    border: transparent;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+}
+#notif img{
+    filter: invert(100%);
+}
+#notif:hover{
+    background-color: #d7d7d7;
+}
+
+#IconPerfil{
+    background-color: transparent;
+    border: transparent;
+    max-width: 60px;
+    cursor: pointer;
+}
+#IconPerfil img{
+    max-width: 30px;
+    max-height: 30px;
+    padding: 0;
+    border-radius: 90px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+#bara-lateral{
+    grid-column: 1;
+    grid-row: 2;
+    outline: solid aquamarine 1px;
+}
+
+#videos{
+    grid-column: 2;
+    grid-row: 2;
+    margin-top: 10px;
+}
+
+.videoGrid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.VideoCard{
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+    max-width: 320px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.VideoCard:hover {
+    transform: scale(1.03);
+    background-color: #d7d7d7;
+}
+
+.VideoCard img {
+    background-size: auto;
+    background-position: center;
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+.videoInfo{
+    padding: 10px;
+}
+.videoInfo h3 {
+    margin: 0 0 6px;
+    font-size: 16px;
+  }
+  
+  .videoInfo p {
+    margin: 0;
+    font-size: 14px;
+    color: #aaa;
+  }

@@ -1,0 +1,156 @@
+
+/*PAGINA DE REFERENCIA: https://fashion.fandom.com/wiki/Fashion_Wiki (cambie contenido)*/
+html,
+body,
+#principal {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+/*----MENU----*/
+#videos{
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid brown;
+    columns: 1;
+}
+
+
+#principal {
+    display: grid;
+    grid-template-columns: 300px auto;
+    grid-template-rows: 50px auto;
+    
+}
+
+/*-----HEADER------ */
+#encabezado {
+    grid-row: 1;
+    grid-column: 1/3;
+    outline: solid #ffffff 1px;
+    display: grid;
+    grid-template-columns: 4fr 2fr 1fr;
+    grid-template-rows: 100%;
+    background: rgb(51, 3, 13);
+}
+
+
+/*------ASIDE--------*/
+#barra-lateral {
+    outline: solid brown 1px;
+    background: rgb(51, 3, 13);
+}
+
+/*------MENU-----*/
+#videos {   
+  background-image:url(https://fondosmil.co/fondo/7568.jpg);
+  background-size: cover;
+  background-position: center;
+  color: white;
+  outline: #6e6e6e;
+  overflow-y: scroll;
+}
+
+/*------ASIDE-------*/
+#barra-lateral{
+    overflow-y: scroll;  
+}
+
+/*-----COLOR DE PARRAFOS Y TITULOS------*/
+h1{
+    color: rgb(255, 230, 0);
+}
+#intro{
+    color: rgb(158, 4, 35);
+}
+
+p{
+    color: #ffffff;
+}
+
+/*------NAVEGACION CAMBIO DE COLOR CUANDO PASO EL CURSOR-----*/
+nav p:hover{
+    color: #000000;
+    background-color:rgb(255, 230, 0);
+    
+}
+
+/*parte de la navegacion, divido en dos columnas y hago separacion*/
+.grilla{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    outline: #6e6e6e;
+    gap: 1em;
+}    
+
+#iconos {
+    text-align: center;
+}
+
+#navegacion{
+    padding: 5;   
+}
+
+#div2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#videos{
+    padding: 10%;
+}
+
+.tarjetaGrande{ 
+    width: 100%;
+    padding: 30px;
+    background-color: #000000;
+    box-sizing: border-box;
+}
+
+.titulo{
+    text-align: center;
+    background-color: white;
+}
+
+/*me sirvio para dividir en tres columnas y luego los alineo los items*/
+.contenido{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+}
+
+/*se coloca uno debajo del otro si achican la pág y coloca espacio en cada uno*/
+.contenido{
+    display: flex;
+    flex-wrap: wrap;
+    /*justify-content: center;*/
+    justify-content: space-evenly;
+}
+.informacionAdicional{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#huye, #monja, #terrifier{
+    text-align: center;
+}
+
+#huye:hover, #monja:hover, #terrifier:hover{
+    background-color:rgb(255, 230, 0); 
+    /*color: #000000;*/  
+}
+
+#img1, #img2, #img3{
+    color: #000000;
+}
+
+
+#video1, #video2, #video3{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5%;
+}

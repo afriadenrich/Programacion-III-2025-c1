@@ -1,0 +1,367 @@
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Hace que el tamaño total incluya contenido + padding + borde */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  /*Variables globales definidas*/
+:root {
+    --bg-primary: #0f0f0f;
+  --bg-secondary: #1a1a1a;
+  --bg-tertiary: #232323;
+  --text-primary: #e0e0e0;
+  --text-secondary: #a0a0a0;
+  --accent: #4285f4;
+  --folder: #fbbc04;
+  --border: #333333;
+}
+
+body {
+    background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6; /*espacio hay entre una línea de texto y la siguiente*/
+  min-height: 100%; /* Se asegura de que el body ocupe al menos toda la altura de la pantalla*/
+    
+}
+
+/*etiqueta <a> de HTML*/
+a {
+    text-decoration: none; /*Elimina el subrayado de enlaces*/
+    color: inherit; /*enlace herede el color del texto del elemento padre*/
+}
+
+/* Container with Grid layout --------*/
+.container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto auto 1fr auto; /* Alturas de las filas (header, nav, contenido, footer) */
+    grid-template-areas: /* Define cómo se distribuyen las áreas de la página */
+        "header header"
+        "aside nav"
+        "aside article"
+        "footer footer";
+    min-height: 100vh; /*ocupa al menos toda la altura visible del navegador*/
+  }
+
+/* +++++++++++++++++++++++++++++++++++++++++++ HEADER +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+header {
+    grid-area: header; /* Le dice al Grid que este elemento ocupa el área 'header' */
+    display: flex;
+    justify-content: space-between; /* Deja espacio entre el logo y los botones */
+    align-items: center; /* Centra verticalmente los elementos */
+    padding: 8px 16px; /* Espacio interno */
+    background-color: var(--bg-primary);
+    border-bottom: 1px solid var(--border); /* Línea, separa el header del resto */
+  }
+
+  /*Logo (contenedor y estilo) -------------------------------------------*/
+.logo {
+    display: flex; /* Alinea el ícono y el texto del logo horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    gap: 8px; /* Espacio entre el ícono y el texto */
+  }
+  
+.drive-logo-img { /* Tamaño de la imagen del logo */
+    width: 40px;
+    height: 40px;
+  }
+  
+.logo span {
+    font-size: 22px;  /* Tamaño del texto del logo */
+    font-weight: 400; /* Grosor medio */
+    color: var(--text-primary);
+  }
+  
+  /*Acciones del header -------------------------------------------*/
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  /*Botones con íconos(perfil/configuración) -------------------------------------------*/
+  .icon-button {
+    display: flex; /* Centra el ícono dentro del botón */
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px; /* Tamaño cuadrado del botón */
+    border-radius: 50%; /* Hace el botón completamente redondo */
+    background: transparent; /* Sin fondo por defecto */
+    border: none; /* Sin borde visible */
+    color: var(--text-secondary);
+    cursor: pointer; /* Cursor tipo "mano" al pasar por encima */
+  }
+  
+.icon-button:hover { /* Al pasar el mouse, se aclara el fondo */
+    background-color: var(--bg-tertiary);
+  }
+  
+.icon-button i { /* Tamaño del ícono*/
+    font-size: 20px;
+  }
+
+  /* +++++++++++++++++++++++++++++++++++++++++++ NAV +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+nav {
+    grid-area: nav;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    background-color: var(--bg-primary);
+    border-bottom: 1px solid var(--border);
+  }
+  
+  /*Estilos para el contenedor del buscador -------------------------------------------*/
+.search-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 720px;
+    background-color: var(--bg-tertiary);
+    border-radius: 8px;
+    padding: 8px 16px;
+  }
+
+    /*Estilo del ícono de búsqueda -------------------------------------------*/
+.search-icon {
+    color: var(--text-secondary);
+    margin-right: 12px;
+  }
+  
+  /*Estilos del campo de entrada -------------------------------------------*/
+.search-input {
+    flex: 1; /* Hace que el input crezca para ocupar todo el espacio disponible */
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    font-size: 16px;
+    outline: none;
+  }
+  
+  /*Estilo para el placeholder del input-------------------------------------------*/
+.search-input::placeholder {
+    color: var(--text-secondary); /* El texto gris clarito que aparece como guía (“Buscar archivos…”) */
+  }
+
+/* +++++++++++++++++++++++++++++++++++++++++++ ASIDE +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+aside {
+    grid-area: aside;
+    display: flex;
+    flex-direction: column; /* Organiza los elementos de arriba hacia abajo */
+    justify-content: space-between;
+    background-color: var(--bg-primary); 
+    border-right: 1px solid var(--border); /* Línea divisoria a la derecha */
+    padding: 16px;
+    height: 100%;
+  }
+  
+  /*Agrupa los elementos superiores del menú lateral -------------------------------------------*/
+  .nav-top {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  /*Botón para "Nuevo"*/
+  .new-button {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background-color: var(--bg-tertiary);
+    border: none;
+    border-radius: 24px;
+    color: var(--text-primary);
+    font-size: 14px;
+    cursor: pointer;
+    width: fit-content; /* El ancho se ajusta al contenido */
+  }
+  
+  /* Cambia el fondo al pasar el mouse */
+  .new-button:hover {
+    background-color: #2d2d2d;
+  }
+
+  /*Contenedor de los enlaces de navegación-------------------------------------------*/
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  
+  /*Estilo individual de cada enlace -------------------------------------------*/
+  .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    border-radius: 0 16px 16px 0;
+    color: var(--text-secondary);
+  }
+  
+  .nav-link.active {
+    background-color: #41444d;
+    color: var(--text-primary);
+  }
+  
+  .nav-link:hover:not(.active) {
+    background-color: var(--bg-tertiary);
+  }
+  
+  .nav-link i {
+    width: 20px;
+    text-align: center;
+  }
+  
+  /* +++++++++++++++++++++++++++++++++++++++++++ ARTICLE +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+.content {
+    grid-area: article;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 16px;
+    background-color: var(--bg-primary);
+    overflow-y: auto;
+  }
+  
+  .files-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  
+  .folder-card {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    background-color: var(--bg-secondary);
+    border-radius: 8px;
+    overflow: hidden; /*Evitar que algo sobresalga del borde redondeado*/
+    cursor: pointer;
+  }
+  
+  .folder-card:hover {
+    background-color: var(--bg-tertiary);
+  }
+  
+  .folder-icon {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+  }
+  
+  .folder-icon i {
+    font-size: 24px;
+    color: var(--folder);
+  }
+  
+  .folder-info {
+    padding: 12px 16px;
+  }
+  
+  .folder-info h3 {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+  
+  .folder-info p {
+    font-size: 12px;
+    color: var(--text-secondary);
+  }
+  
+  .article-divider {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+  }
+  
+  .article-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .article-title h2 {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+/* +++++++++++++++++++++++++++++++++++++++++++ FOOTER +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background-color: var(--bg-primary);
+    border-top: 1px solid var(--border);
+  }
+  
+  .footer-links {
+    display: flex;
+    gap: 24px;
+  }
+  
+  .footer-links a {
+    color: var(--text-secondary);
+    font-size: 14px;
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .copyright {
+    color: var(--text-secondary);
+    font-size: 14px;
+  }
+  
+/* +++++++++++++++++++++++++++++++++++++++++++ @MEDIA +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+/*como maximo*/
+  @media (max-width: 600px) {
+    .container {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "header"
+        "nav"
+        "article"
+        "footer";
+    }
+    
+    aside {
+      display: none;
+    }
+
+    .files-grid {
+      justify-content: center;
+    }
+    
+    footer {
+      flex-direction: column;
+      gap: 16px;
+    }
+    
+    .footer-links {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .search-container {
+      max-width: 100%;
+    }
+    
+    .folder-card {
+      width: 100%;
+    }
+}
+/*como minimo*/
+@media (min-width: 1000px) {
+    .folder-card {
+        flex-grow: 0.5; 
+    }
+}

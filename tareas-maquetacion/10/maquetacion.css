@@ -1,0 +1,402 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#contenedor {
+    display: grid;
+    grid-template-columns: 210px 1fr;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+    /* gap: 20px; */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: palevioletred; */
+    grid-column: 1 / 3;
+    grid-row: 1;
+    padding: 10px;
+    background-color: #101b33;
+    border-bottom: 2px solid rgb(65, 66, 85);
+}
+
+.nav-izq { 
+    display: flex;
+    gap: 10px;
+}
+
+.nav,
+#crear,
+#usuario {
+    padding: 5px;
+    border-radius: 8px;
+    border: none;
+}
+
+#buscar {
+    width: 50%;
+    height: 40px;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    resize: none;
+}
+
+
+.aside {
+    grid-column: 1;
+    grid-row: 2;
+    padding: 0 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #101b33;
+    border-right: 2px solid rgb(65, 66, 85);
+    color: white;
+    position: sticky;
+    top: 0;
+}
+
+#scroll_aside_especifico {
+    max-height: 300px;
+    overflow: auto;
+}
+
+
+.menu-nav {
+    flex-grow: 1;
+    
+}
+
+.menu-nav>div {
+    margin-bottom: 20px;
+}
+
+.menu-nav h4 {
+    margin: 8px 0;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.titulo-seccion {
+    margin-top: 10px;
+    margin-bottom: 6px;
+}
+
+.linea-divisora {
+    border: none;
+    border-top: 2px solid rgb(65, 66, 85);
+    margin-top: 20px;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.linea-divisora-abajo {
+    border: none;
+    border-top: 2px solid rgb(65, 66, 85);
+    padding: 5px;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+#bloque-uno {
+    padding-top: 10px;
+}
+
+#bloque-tres,
+#bloque-dos,
+#bloque-cuatro {
+    padding-bottom: 5px;
+    margin: 8px 0;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#bloque-dos .subtitulo,
+#bloque-tres .subtitulo,
+#bloque-cuatro .subtitulo {
+    margin-left: 5px;
+    padding-left: 5px;
+
+}
+
+#bloque-cinco {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#bloque-cinco button{
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.main {
+    background-color: #292e42;
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow: auto;
+    
+}
+
+.contenedor-main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#saludo {
+    text-align: center;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+#saludo h4 {
+    padding-bottom: 8px;
+}
+
+.nav {
+    padding: 5px;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+#tareas-main {
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    background-color: #1e2233;
+    box-shadow: 0 4px 8px rgb(65, 66, 85);
+    color: white;
+}
+
+#estado-tareas {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.checklist label{
+    display: flex;
+    flex-direction: center;
+    gap: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+.checklist input[type="checkbox"]{
+
+    appearance: none;
+}
+
+.checklist input[type="checkbox"]:checked + span {
+    text-decoration: line-through;
+    color: #6a5acd;
+}
+
+#fila-central {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+#notas-main, #proyectos-main {
+    background-color: #1e2233;
+    color: white;
+    flex: 1;
+    padding: 20px;
+    border-radius: 15px;
+    /* background-color: white; */
+    box-shadow: 0 4px 8px rgb(65, 66, 85);
+}
+
+#proyectos-main {
+    margin-left: 20px;
+}
+
+#proyectos-main h3 {
+    margin: 0;
+    flex-grow: 0;
+}
+
+.encabezado-bloque {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+#nota {
+    width: 100%;
+    height: 320px;
+    padding: 10px;
+    resize: none;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 14px;
+    box-sizing: border-box; 
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.guardar {
+    align-self: flex-end;
+    padding: 5px 10px;
+    border-radius: 6px;
+    background-color: #84a1f0;
+    /* color: white; */
+    border: none;
+    cursor: pointer;
+}
+
+
+.lista-proyectos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    gap: 30px;
+    margin-top: 10%;
+}
+
+#fila-abajo {
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    background-color: #1e2233;
+    color: white;
+    box-shadow: 0 4px 8px rgb(65, 66, 85);
+}
+ 
+.lista-personas {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    gap: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+
+textarea, input, .bloque-texto {
+    border: 1px solid #DADADA;
+}
+
+
+
+/* tablets y pantallas medianas/grandes*/
+@media screen and (max-width: 767px) {
+    #contenedor {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .aside {
+        background-color: darkred;
+        position: relative;
+    }
+
+    #notas-main, 
+    #proyectos-main {
+        width: 100%;
+        margin-bottom: 20px;
+        /* padding: 20px;
+        box-sizing: border-box; */
+    }
+
+    #fila-central {
+        flex-direction: column;
+    }
+
+    #proyectos-main {
+        margin: 0px;
+    }
+
+    .lista-proyectos {
+        padding-bottom: 50px;
+    }
+
+    .lista-personas {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+}
+
+/* pantallas moviles*/
+@media screen and (max-width: 767){
+    #contenedor {
+        display: block;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    .nav-izq {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #crear {
+        display: none;
+    }
+
+    #buscar {
+        display: none;
+    }
+
+    aside {
+        display: none;
+    }
+
+    .main {
+        padding: 20px;
+    }
+
+    #fila-central {
+        display: none;
+    }
+
+    .lista-proyectos {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .encabezado-bloque {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    .checklist {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #usuario {
+        display: none;
+    }
+
+
+}

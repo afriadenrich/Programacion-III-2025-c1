@@ -1,0 +1,255 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+    background-color: black
+}
+
+#grilla {
+    display: grid;
+    grid-template-columns: 450px auto;
+    grid-template-rows: 60px auto;
+    width: 100%;
+    height: 100%;
+}
+
+#encabezado {
+    grid-column: 1 / 3;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 20px;
+    padding: 0 20px;
+    background-color: black;
+    color: white;
+}
+
+
+#logos {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    cursor: pointer;
+}
+
+
+#barra-busqueda {
+    display: flex;
+    justify-content: center;
+}
+
+#barra-busqueda input {
+    width: 100%;
+    max-width: 400px;
+    height: 35px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: none;
+    background-color: #121212;
+    font-weight: bold;
+}
+
+#barra-busqueda img{
+    margin-right: 5px;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+#navegacion {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#navegacion a {
+    color: grey;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#navegacion button {
+    padding: 6px 15px;
+    border-radius: 20px;
+    border: none;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+#aside {
+    grid-column: 1;
+    grid-row: 2;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    background-color: #181818;
+    color: white;
+    padding: 10px;
+    gap: 10px;
+    height: 100%;
+    margin: 0 5px 0 5px;
+    border-radius: 10px;
+}
+
+#aside h2 {
+    font-size: 18px;
+}
+
+#aside button{
+    padding: 5px 15px;
+    border-radius: 20px;
+    border: none;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#aside p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+}
+
+#tarjeta {
+    background-color: #333;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    height: 100px;
+}
+
+#pie {
+    margin: 5px 5px 100px 10px;
+}
+
+#pie ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#pie li {
+    font-size: 12px;
+    margin: 5px 0;
+    color: #666;
+    cursor: pointer;
+}
+
+#pie p {
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+
+#principal {
+    grid-column: 2;
+    grid-row: 2;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background-color: #121212;
+    color: white;
+    overflow-y: auto;
+    max-height: 100%;         
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+#tendencias,
+#artistas-populares,
+#albumes-populares,
+#listas-seleccionadas {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#tendencias h2,
+#artistas-populares h2,
+#albumes-populares h2,
+#listas-seleccionadas h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.canciones,
+.artistas,
+.albumes,
+.listas {
+    display: flex;
+    gap: 20px;
+}
+
+.cancion,
+.artista,
+.album,
+.lista {
+    width:400px;
+    background-color: #121212;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.cancion:hover,
+.artista:hover,
+.album:hover,
+.lista:hover {
+    background-color: #282828;
+}
+
+.cancion img,
+.album img,
+.lista img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.artista img{
+    width: 100%;
+    border-radius: 100%;
+}
+
+.cancion p,
+.artista p,
+.album p,
+.lista p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+#pie-principal {
+    background-color: #181818;
+    color: white;
+    padding: 20px;
+}
+
+#pie-principal ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 0;
+    list-style-type: none;
+}
+
+#pie-principal li {
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#empresa, #comunidades, #enlaces, #planes {
+    display: flex;
+    flex-direction: column;
+}
+
+#empresa li, #comunidades li, #enlaces li, #planes li {
+    margin-bottom: 10px;
+}

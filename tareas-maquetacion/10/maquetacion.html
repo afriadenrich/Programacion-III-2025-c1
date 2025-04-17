@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- REPLICANDO ASANA -->
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./maquetacion.css" />
+    <title> Villoldo Verónica </title> 
+
+<body>
+    <div id="contenedor">
+        <header class="header">
+            <div class="nav-izq">
+                <button class="nav">...</button>
+                <button id="crear">➕ Crear</button>
+            </div>
+            <input type="text" id="buscar" placeholder="Buscar..."></input>
+            <!-- <div id="buscar">Buscar</div> -->
+            <button id="usuario">Usuario</button>
+            <!--icono foto mia -->
+        </header>
+
+        <aside class="aside">
+            <div class="menu-nav">
+                <div id="bloque-uno">
+                    <h4 class="inicio">🏠 Inicio</h4>
+                    <h4 class="mis-tareas">✅ Mis tareas</h4>
+                    <h4 class="bandeja_entrada">🔔 Bandeja de entrada</h4>
+                    <hr class=" linea-divisora">
+                </div>
+                <div id="scroll_aside_especifico">
+                    <div id="bloque-dos">
+                        <h4 class="titulo-seccion">Análisis de datos</h4>
+                        <h4 class="subtitulo">📈 Informes</h4>
+                        <h4 class="subtitulo">📂 Portfolios</h4>
+                        <h4 class="subtitulo">🙍🏻‍♀️ Objetivos</h4>
+                    </div>
+                    <div id="bloque-tres">
+                        <h4 class="titulo-seccion">Proyectos</h4>
+                        <div id="lista-proyectos-aside">
+                            <h4 class="subtitulo">🟪 Proyecto 1</h4>
+                            <h4 class="subtitulo">🟩 Proyecto 2</h4>
+                            <h4 class="subtitulo">🟨 Proyecto 5</h4>
+                            <h4 class="subtitulo">🟥 Proyecto 4</h4>
+                            <h4 class="subtitulo">🟦 Proyecto 5</h4>
+                        </div>
+                    </div>
+                    <div id="bloque-cuatro">
+                        <h4 class="titulo-seccion">Equipo</h4>
+                        <h4 class="subtitulo">🕵🏻‍♂️ Marketing</h4>
+                    </div>
+                </div>
+
+
+                    </div>
+                    <hr class="linea-divisora-abajo">
+                    <div id="bloque-cinco">
+                        <button>Cambiar de plan</button>
+                        <button>Invitar</button>
+                    </div>
+        </aside>
+
+        <main class="main">
+            <div class="contenedor-main">
+                <div id="saludo">
+                    <h4>Domingo 13 de abril</h4>
+                    <h2>Buenos días, Verónica</h2>
+                </div>
+
+                <div id="tareas-main">
+                    <!-- poner icono foto mia -->
+                    <div id="fila-arriba">
+                        <div class="encabezado-bloque">
+                            <h3>Mis tareas</h3>
+                            <button class="nav">...</button>
+                        </div>
+                        <div id="estado-tareas">
+                            <h6>Próximas</h6>
+                            <h6>Con retraso</h6>
+                            <h6>Finalizadas</h6>
+                        </div>
+                    </div>
+
+                    <div class="checklist">
+                        <label><input type="checkbox">
+                            <span>👉🏻 Poner tipografia </span>
+                        </label>
+                        <label><input type="checkbox">
+                            <span>👉🏻 Ver de poner iconos</span>
+                        </label>
+                        <label><input type="checkbox">
+                            <span> 👉🏻 Cambiar colores</span>
+                        </label>
+                        <label><input type="checkbox">
+                            <span>👉🏻 Poner deslizador: 3 lados</span>
+                        </label>
+                        <label><input type="checkbox">
+                            <span>👉🏻 Media querys</span>
+                        </label>
+                        <label><input type="checkbox">
+                            <span>👉🏻 Ver tema input para notas</span>
+                        </label>
+                        <label><input type="checkbox">
+                            <span>👉🏻 Agregar personas</span>
+                        </label>
+                        <label><input type="checkbox">
+                            <span>👉🏻 Terminar tarea</span>
+                        </label>
+                        <label><input type="checkbox">
+                            <span>👉🏻 Instalar MongoDB</span>
+                        </label>
+                        <label><input type="checkbox">
+                            <span>👉🏻 Ver última clase de bbdd</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div id="fila-central">
+                    <div id="notas-main">
+                        <div class="encabezado-bloque">
+                            <h3 id="titulo-elemento">Bloc de notas privado</h3>
+                            <button class="nav">...</button>
+                        </div>
+                        <div class="bloque_textarea">
+                            <textarea name="nota" id="nota" placeholder="Escribe tu nota..."></textarea>
+                            <button class="guardar">Guardar nota</button>
+                        </div>
+                    </div>
+
+                    <div id="proyectos-main">
+                        <div class="encabezado-bloque">
+                            <h3 id="titulo-elemento">Proyectos</h3>
+                            <button class="nav">...</button>
+                        </div>
+                        <div class="lista-proyectos">
+                            <div class="proyecto">🟪 Proyecto 1</div>
+                            <div class="proyecto">🟩 Proyecto 2</div>
+                            <div class="proyecto">🟨 Proyecto 5</div>
+                            <div class="proyecto">🟥 Proyecto 4</div>
+                            <div class="proyecto">🟦 Proyecto 5</div>
+                            <div class="proyecto">⬜ Proyecto 6</div>
+                            <div class="proyecto">🟧 Proyecto 7</div>
+                            <div class="proyecto">🟫 Proyecto 8</div>
+                            <div class="proyecto">🆕 Proyecto 9</div>
+                            <div class="proyecto">🆕 Proyecto 10</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="fila-abajo">
+                    <div class="encabezado-bloque">
+                        <h3 id="titulo-elemento">Personas</h3>
+                        <button class="nav">...</button>
+                    </div>
+                    <div class="lista-personas">
+                        <div class="persona">👩🏻‍🦰 Sofía Díaz</div>
+                        <div class="persona">👸🏻 Emma Romero</div>
+                        <div class="persona">🧒🏻 Tomás Ríos</div>
+                        <div class="persona">👩🏻‍🦳 Clara Morales</div>
+                        <div class="persona">👩🏻‍⚕️ Alejandra Pérez</div>
+                        <div class="persona">🙆🏻‍♂️ Rodrigo Bueno</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
