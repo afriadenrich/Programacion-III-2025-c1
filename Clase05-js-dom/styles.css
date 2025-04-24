@@ -1,0 +1,12 @@
+.parrafo {
+    /* margin: 0;
+    text-decoration: underline; */
+}
+
+.rojo {
+    color: rgb(43, 106, 85);
+}
+
+#mostrar:hover {
+    font-weight: 900;
+}
