@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <button id="showModalBtn" class="btn btn-primary">Mostrar Modal</button>
+      <button id="showAlertBtn" class="btn btn-warning">Mostrar Alert</button>
+      <button id="showToastBtn" class="btn btn-success">Mostrar Toast</button>
+    </div>
+    <div id="toast-container" class="toast-container bottom-0 end-0 p-3"></div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      // Función para crear un Modal dinámico y personalizado
+      function createModal({
+        title = "Modal Title",
+        body = "Modal Body",
+        footer = "",
+        size = "md",
+      }) {
+        const modalId = "dynamicModal";
+
+        // Crear el modal
+        const modalHtml = `
+        <div class="modal fade" id="${modalId}" tabindex="-1" aria-labelledby="${modalId}Label" aria-hidden="true">
+          <div class="modal-dialog modal-${size}">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="${modalId}Label">${title}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                ${body}
+              </div>
+              <div class="modal-footer">
+                ${footer}
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+
+        // Insertar el modal en el body
+        document.body.insertAdjacentHTML("beforeend", modalHtml);
+
+        // Mostrar el modal
+        const modalElement = new bootstrap.Modal(
+          document.getElementById(modalId)
+        );
+        modalElement.show();
+
+        // Eliminar el modal del DOM cuando se cierra
+        document
+          .getElementById(modalId)
+          .addEventListener("hidden.bs.modal", function () {
+            document.getElementById(modalId).remove();
+          });
+      }
+
+      // Función para crear un Alert dinámico y personalizado
+      function createAlert({
+        message = "Alert message",
+        type = "info",
+        dismissible = true,
+      }) {
+        const alertId = `dynamicAlert-${Math.floor(Math.random() * 9999)}`;
+
+        // Crear el alert
+        const alertHtml = `
+        <div id="${alertId}" class="container mt-4 alert alert-${type} alert-dismissible fade show" role="alert">
+          ${message}
+          ${
+            dismissible
+              ? '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>'
+              : ""
+          }
+        </div>
+      `;
+
+        document.body.insertAdjacentHTML("afterbegin", alertHtml);
+
+        setTimeout(() => {
+          const alertElement = document.getElementById(alertId);
+          if (alertElement) {
+            alertElement.classList.remove("show");
+            alertElement.classList.add("fade");
+            setTimeout(() => alertElement.remove(), 150); // Esperar a que termine la animación
+          }
+        }, 5000);
+      }
+
+      // Función para crear un Alert dinámico y personalizado
+      function createToast({
+        title = "Toast title",
+        body = "Toast body",
+        type = "info",
+        dismissible = true,
+      }) {
+        const toastId = `dynamicToast-${Math.floor(Math.random() * 9999)}`;
+        // Crear el alert
+        const toastHtml = `
+        <div id="${toastId}" class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <img src="./prueba.jpg" class="rounded me-2" width="30">
+          <strong class="me-auto">${title}</strong>
+          <small id="time-${toastId}">Ahora</small>
+          ${
+            dismissible
+              ? '<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>'
+              : ""
+          }
+        </div>
+        <div class="toast-body">
+        ${body}
+        </div>
+      </div>
+        `;
+        document.getElementById("toast-container").innerHTML += toastHtml;
+        setTimeout(() => {
+          const alertElement = document.getElementById(toastId);
+          if (alertElement) {
+            alertElement.classList.remove("show");
+            alertElement.classList.add("fade");
+            setTimeout(() => alertElement.remove(), 150); // Esperar a que termine la animación
+          }
+        }, 5000);
+      }
+
+      // Ejemplo de uso con botones
+      document.getElementById("showModalBtn").addEventListener("click", () => {
+        createModal({
+          title: "Título del Modal",
+          body: "<p>Este es el contenido del modal.</p>",
+          footer:
+            '<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>',
+          size: "md",
+        });
+      });
+
+      document.getElementById("showAlertBtn").addEventListener("click", () => {
+        createAlert({
+          message: "Este es un mensaje de alerta personalizado!",
+          type: "warning",
+          dismissible: true,
+        });
+        createAlert({
+          message: "Este es un mensaje de alerta personalizado!",
+          type: "success",
+          dismissible: true,
+        });
+        createAlert({});
+      });
+      document.getElementById("showToastBtn").addEventListener("click", () => {
+        createToast({});
+      });
+    </script>
+  </body>
+</html>
