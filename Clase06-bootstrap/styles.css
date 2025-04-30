@@ -1,0 +1,9 @@
+h1 {
+    /* USO DE COLORES */
+    color: var(--bs-pink);
+}
+
+#mode-toggler {
+    color: var(--bs-warning);
+    font-size: 40px;
+}

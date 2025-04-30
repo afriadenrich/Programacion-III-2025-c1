@@ -45,4 +45,19 @@
 - Javascript básico
 
 ### Documentación
-    
+
+## Clase 05 - 23/04/25
+
+- 
+
+### Documentación
+
+## Clase 06 - 25/04/25
+
+- Bootstrap
+
+### Documentación
+
+- [Documentación de Boostrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
+- [Iconos de Bootstrap](https://icons.getbootstrap.com/)
+- [PPT Clase Boostrap]()
