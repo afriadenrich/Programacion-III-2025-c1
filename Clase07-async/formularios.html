@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formularios</title>
+  </head>
+  <body>
+    <form id="form" method="get">
+      <!-- action="./formularios.js" -> fetch("./formularios.js", { method: "GET"})-->
+      <label for="nombre">Nombre</label>
+      <input
+        id="nombre"
+        type="text"
+        required
+        minlength="5"
+        maxlength="10"
+        name="nombre"
+        pattern="[a-z]{1,10}"
+      />
+      <input type="number" min="1" max="120" name="edad" />
+      <input type="email" required name="email" />
+      <input type="password" required minlength="8" name="password" />
+      <div>
+        <label
+          ><input type="checkbox" id="cbox1" name="terminos" /> Acepto los
+          términos y servicios</label
+        ><br />
+
+        <input type="checkbox" id="cbox2" name="notificaciones" />
+        <label for="cbox2">Recibir notificaciones</label>
+      </div>
+
+      <div>
+        <div>
+          <input type="radio" id="prog" name="radio" value="prog" required />
+          <label for="prog">Programacion</label>
+        </div>
+        <div>
+          <input type="radio" id="datos" name="radio" value="datos" required />
+          <label for="datos">Datos</label>
+        </div>
+        <div>
+          <input
+            type="radio"
+            id="sistemas"
+            name="radio"
+            value="sistemas"
+            required
+          />
+          <label for="sistemas">Sistemas</label>
+        </div>
+      </div>
+      <select name="opciones">
+        <option value="progIII">Programacion III</option>
+        <option value="progII">Programacion II</option>
+        <option value="progI">Programacion I</option>
+      </select>
+      <!-- <textarea></textarea> -->
+      <!-- <button>Botón</button> -->
+      <input type="submit" value="Botón" />
+    </form>
+
+    <script src="formularios.js"></script>
+  </body>
+</html>
