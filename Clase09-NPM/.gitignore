@@ -1,0 +1,8 @@
+# innecesarias de subir
+/node_modules
+
+# muy pesadas
+*.mp4
+
+# secretas o cambiantes
+.env
