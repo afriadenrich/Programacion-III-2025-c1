@@ -1,1 +1,1 @@
-const HOLA = "HOLA";
+const HOLA = "CHAU";
