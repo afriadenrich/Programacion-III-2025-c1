@@ -8,3 +8,4 @@ const CHAU = "NOS VEMOS";
 // ETC...
 
 // MODIFICO COSAS
+const otraCosa = "Otra cosa";
