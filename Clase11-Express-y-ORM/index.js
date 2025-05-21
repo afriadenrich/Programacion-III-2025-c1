@@ -1,4 +1,5 @@
-const HOLA = "HOLA";
+const HOLA = "CHAU";
+
 
 const CHAU = "NOS VEMOS";
 
