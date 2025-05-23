@@ -7,17 +7,12 @@ router.get("/", MotoController.traerTodos);
 
 router.get("/:id", MotoController.traerPorId);
 
-router.post("/", (req, res) => {
-  res.send("POST de motos");
-});
-router.put("/", (req, res) => {
+router.post("/", MotoController.crear);
+
+router.put("/:id", (req, res) => {
   res.send("PUT de motos");
 });
-router.patch("/", (req, res) => {
-  res.send("PATCH de motos");
-});
-router.delete("/", (req, res) => {
-  res.send("DELETE de motos");
-});
+
+router.delete("/:id", MotoController.eliminar);
 
 module.exports = router;
