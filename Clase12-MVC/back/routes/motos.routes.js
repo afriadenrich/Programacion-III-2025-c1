@@ -9,9 +9,7 @@ router.get("/:id", MotoController.traerPorId);
 
 router.post("/", MotoController.crear);
 
-router.put("/:id", (req, res) => {
-  res.send("PUT de motos");
-});
+router.put("/:id", MotoController.modificar);
 
 router.delete("/:id", MotoController.eliminar);
 

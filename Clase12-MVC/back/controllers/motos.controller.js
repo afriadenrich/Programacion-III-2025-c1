@@ -31,9 +31,15 @@ class MotoController {
   static async crear(req, res) {
     // const body = req.body;
     // const marca = body.marca;
-    const marca = req.body.marca;
-    const resultado = await MotoModel.create({ marca: marca });
-    res.send(resultado);
+    try {
+      const marca = req.body.marca;
+      const resultado = await MotoModel.create({ marca: marca });
+      res.send(resultado);
+    } catch (error) {
+      console.log(error);
+      res.status(400);
+      res.send({ error: "Hubo un error" });
+    }
   }
 
   /**
@@ -43,7 +49,15 @@ class MotoController {
    * @param {request} req
    * @param {response} res
    */
-  static async modificar(req, res) {}
+  static async modificar(req, res) {
+    const id = req.params.id;
+    const marca = req.body.marca;
+    const resultado = await MotoModel.update(
+      { marca: marca },
+      { where: { id: id } }
+    );
+    res.send(resultado);
+  }
 
   /**
    * Trae el id por params
