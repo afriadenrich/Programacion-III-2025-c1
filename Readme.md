@@ -42,13 +42,26 @@
 
 ## Clase 04 - 16/04/25
 
-- Javascript básico
+- [Javascript](https://developer.mozilla.org/es/docs/Web/JavaScript)
+- [Palabras clave y otras expresiones](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators)
+- [Funciones](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Functions)
+- [Objetos](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Working_with_objects)
+- [Arrays](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array)
+- [Clases](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Classes)
 
 ### Documentación
 
 ## Clase 05 - 23/04/25
 
-- 
+- [Arrow Functions](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+- [Spread Operator](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+- [localStorage](https://developer.mozilla.org/es/docs/Web/API/Window/localStorage)
+- [DOM](https://developer.mozilla.org/es/docs/Glossary/DOM)
+- [getElementById](https://developer.mozilla.org/es/docs/Web/API/Document/getElementById)
+- [onclick](https://www.w3schools.com/jsref/event_onclick.asp)
+- [innerText](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText)
+- [innerHTML vs innerText](https://www.freecodecamp.org/news/innerhtml-vs-innertext-vs-textcontent/)
+- [Documentar con jsDocs](https://jsdoc.app/about-getting-started) 
 
 ### Documentación
 
@@ -60,4 +73,3 @@
 
 - [Documentación de Boostrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
 - [Iconos de Bootstrap](https://icons.getbootstrap.com/)
-- [PPT Clase Boostrap]()
