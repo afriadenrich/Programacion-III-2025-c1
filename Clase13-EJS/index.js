@@ -10,7 +10,11 @@ const app = express();
 require("dotenv").config();
 
 // EJS
+const path = require("path");
+// const path = require("node:path");
 
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "vistas"));
 // EJS
 
 // implementar el body parser
@@ -30,5 +34,9 @@ app.use("/impresoras", impresorasRouter);
 // La DB devuelve el modelo creado / listado / modificado / etc.
 // El controller recibe la respuesta de la DB.
 // Tomar lo que devuelve el controller y generar un HTML.
+
+app.get("/", (req, res) => {
+  res.render("index");
+});
 
 app.listen(3000);
