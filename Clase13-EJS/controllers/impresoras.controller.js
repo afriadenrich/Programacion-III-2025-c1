@@ -9,7 +9,9 @@ class ImpresoraController {
    */
   static async traerTodos(req, res) {
     const impresoras = await Impresora.findAll();
-    res.send(impresoras);
+
+    res.render("impresoras", { impresoras });
+    // res.send(impresoras);
   }
 
   /**

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crear Impresora</title>
+  </head>
+  <body>
+    <form>
+      <div>
+        <input id="marca" name="marca" />
+      </div>
+      <div>
+        <input id="modelo" name="modelo" />
+      </div>
+      <div>
+        <input id="cartuchos" name="cartuchos" />
+      </div>
+      <div>
+        <input id="tipo" name="tipo" />
+      </div>
+      <div>
+        <!-- <input type="submit" value="Crear" /> -->
+      </div>
+    </form>
+    <button id="crear">Crear</button> -->
+    <script>
+      const crear = document.getElementById("crear");
+
+      const marca = document.getElementById("marca");
+      const tipo = document.getElementById("tipo");
+      const cartuchos = document.getElementById("cartuchos");
+      const modelo = document.getElementById("modelo");
+
+      crear.onclick = () => {
+        fetch("/impresoras", {
+          method: "POST",
+          body: JSON.stringify({
+            marca: marca.value,
+            tipo: tipo.value,
+            cartuchos: cartuchos.value,
+            modelo: modelo.value,
+          }),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+      };
+    </script>
+  </body>
+</html>

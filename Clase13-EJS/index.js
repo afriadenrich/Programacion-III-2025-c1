@@ -14,7 +14,7 @@ const path = require("path");
 // const path = require("node:path");
 
 app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "vistas"));
+app.set("views", path.join(__dirname, "views"));
 // EJS
 
 // implementar el body parser
@@ -36,7 +36,8 @@ app.use("/impresoras", impresorasRouter);
 // Tomar lo que devuelve el controller y generar un HTML.
 
 app.get("/", (req, res) => {
-  res.render("index");
+  const datos = [33, 62, 98, "Hola", 3];
+  res.render("index", { nombre: "Agustín", apellido: undefined, datos });
 });
 
 app.listen(3000);
