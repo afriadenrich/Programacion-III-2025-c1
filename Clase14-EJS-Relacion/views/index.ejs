@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INDEX EJS</title>
+  </head>
+  <body>
+    <% if(nombre && apellido) { %>
+    <h1>Hola <%= nombre %> <%= apellido %></h1>
+    <% } else { %>
+    <h1>No hay usuario</h1>
+    <% } %>
+
+    <!-- Array datos [number, number, string, number] -->
+    <ul>
+      <% datos.forEach(elemento => { %>
+      <li><%= elemento %></li>
+      <% }); %>
+    </ul>
+    <ol>
+      <% for(elemento of datos) { %>
+      <li><%= elemento %></li>
+      <% } %>
+    </ol>
+    <ul style="color: rgb(188, 95, 29)">
+      <% for(let i = 0; i < datos.length; i++) { %>
+      <li><%= datos[i] %></li>
+      <% } %>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+<!-- RECIBO: impresoras -> array impresoras -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Impresoras</title>
+  </head>
+  <body>
+    <h1>Impresoras</h1>
+    <hr />
+
+    <% for(imp of impresoras) { %>
+    <div>
+      <h2><%= imp.marca %> - <%= imp.modelo %></h2>
+      <h3><%= imp.cartuchos %> - <%= imp.tipo %></h3>
+    </div>
+    <% }%>
+  </body>
+</html>
