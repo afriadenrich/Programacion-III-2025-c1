@@ -1,0 +1,72 @@
+Middleware
+
+- Capa o capas que van a interactuar con nuestro software.
+
+- Middle -> Medio 
+
+-> Middleware son ACCIONES, como Validaciones, guradados en la DB, revisiones de seguiridad, de funcionamiento, etc.
+
+-> Cliente hace la petición -> Servidor responde -> Cliente recibe respuesta
+-> Cliente hace la petición -> Middleware -> Middleware -> Servidor responde -> Middleware -> Cliente recibe respuesta
+
+-> Cliente no manda los datos -> Middleware rechaza la petición -> Cliente recibe respuesta de error
+
+
+// Middleware
+middleware(){
+    const ApiKey = req.headers.get("ApiKey");
+       validarApiKey(ApiKey);
+
+    if(ApiKeyValida){
+        pasa....
+    } else {
+        res.send("Error", 401) // 401 -> sin autorización
+    }
+}
+
+
+
+// Crear un usuario
+app.post(req, res) => {
+    const {nombre, apellido, dni } = req.body;
+
+    crearUsuario(nombre, apellido, dni);
+
+    }
+    return {"mensaje": "Ok!"};
+}
+
+
+
+/usuarios/crear
+/admin/crear
+/admin/modificar
+
+
+
+
+
+-> Cliente -> Middleware -> Middleware -> ruta responde -> Middleware -> Cliente
+
+-> Cliente -> Middleware -> Cliente
+-> Cliente -> Middleware -> Middleware -> Ruta -> Middleware -> Middleware -> Cliente
+
+Middleware:
+    - Pasar al siguiente.
+    - Dar respuesta al cliente.
+
+Una vez que se llega a la ruta, siempre se pasa al siguiente.
+
+
+
+
+Middleware a nivel de aplicación
+
+app.use(...),
+
+
+middleware a nivel de enrutador
+router.use(...)
+
+a nivel una ruta
+app.get(...).use(...);

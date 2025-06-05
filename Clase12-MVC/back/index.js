@@ -5,6 +5,16 @@
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
+
+app.use((req, res, next) => {
+  // req.headers["Access-Control-Allow-Origin"] = "http://127.0.0.1:5500";
+  res.setHeader("Access-Control-Allow-Origin", "http://127.0.0.1:5500");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+
+  next();
+});
+
 // Solo si versión de node >= 21
 // process.loadEnvFile();
 // Si versión de node < 21
@@ -22,6 +32,6 @@ app.use(bodyParser.json());
 app.use("/motos", motoRouter);
 app.use("/autos", autoRouter);
 
-app.listen(3000, () => {
+app.listen(3001, () => {
   console.log("Levantó súper bien");
 });
