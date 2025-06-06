@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upload de Archivos</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
+    />
+  </head>
+  <body class="bg-light">
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="card shadow">
+            <div class="card-body">
+              <h1 class="text-center mb-4">
+                <i class="bi bi-cloud-upload"></i> Subir Archivos
+              </h1>
+
+              <!-- Formulario Simple -->
+              <form id="uploadForm" enctype="multipart/form-data">
+                <div class="mb-3">
+                  <label for="file" class="form-label"
+                    >Seleccionar archivo:</label
+                  >
+                  <input
+                    type="file"
+                    class="form-control"
+                    id="file"
+                    name="file"
+                  />
+                </div>
+                <button type="submit" class="btn btn-primary w-100">
+                  <i class="bi bi-upload"></i> Subir Archivo
+                </button>
+              </form>
+
+              <!-- Mensaje de respuesta -->
+              <div id="message" class="alert mt-3" style="display: none"></div>
+
+              <!-- Lista de archivos -->
+              <hr class="my-4" />
+              <h5><i class="bi bi-folder2-open"></i> Archivos Subidos</h5>
+              <div id="fileList" class="list-group mt-3">
+                <div class="text-center text-muted">Cargando...</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="index.js"></script>
+  </body>
+</html>
