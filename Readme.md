@@ -73,3 +73,17 @@
 
 - [Documentación de Boostrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
 - [Iconos de Bootstrap](https://icons.getbootstrap.com/)
+
+
+
+
+
+
+18/06 - tema + correccion
+20/06 - no hay clases
+25/06 - tema
+27/06 - "pre entrega" -> correccion
+02/07 - tema
+04/07 - ENTREGA
+11/07 - Recuperatorio del PP + TP (último día para promocionar)
+-------------------------------------
