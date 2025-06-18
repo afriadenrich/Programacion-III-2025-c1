@@ -1,0 +1,16 @@
+{
+  "name": "ejercicio-uso-solid",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0",
+    "fastify": "^5.4.0"
+  }
+}
