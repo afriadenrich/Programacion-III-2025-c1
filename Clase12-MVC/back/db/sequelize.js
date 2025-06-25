@@ -23,7 +23,7 @@ if (process.env.DIALECTO_DB === "mysql") {
   );
 } else {
   sequelize = new Sequelize(process.env.SQLLITE_URI, {
-    dialect: sqlite,
+    dialect: "sqlite",
   });
 }
 
