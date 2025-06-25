@@ -1,4 +1,4 @@
-const apiUrl = "http://localhost:3001";
+const apiUrl = "https://clase12-back.onrender.com";
 
 const peticion = fetch(apiUrl + "/motos");
 
