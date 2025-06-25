@@ -1,5 +1,5 @@
 const { Sequelize } = require("sequelize");
-const sqlite = require("sqlite3");
+const sqlite = require("@sequelize/sqlite3");
 
 console.log("Entra a sequelize y lo levanta");
 
@@ -23,8 +23,7 @@ if (process.env.DIALECTO_DB === "mysql") {
   );
 } else {
   sequelize = new Sequelize(process.env.SQLLITE_URI, {
-    dialect: "sqlite",
-    dialectModule: sqlite,
+    dialect: sqlite,
   });
 }
 
