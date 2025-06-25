@@ -24,6 +24,8 @@ dotenv.config();
 // Me traigo los enrutadores
 const autoRouter = require("./routes/autos.routes");
 const motoRouter = require("./routes/motos.routes");
+const sequelize = require("./db/sequelize.js");
+sequelize.sync({ alter: true });
 
 // Utilizo el body parser
 app.use(bodyParser.json());
